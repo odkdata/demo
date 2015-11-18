@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Basic Cadasta Survey Prototype 7</h:title>
+    <model>
+      <instance>
+        <Basic-survey-prototype7 id="Basic-survey-prototype7" version="201507162126">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <start/>
+          <end/>
+          <today/>
+          <deviceid/>
+          <title/>
+          <project_id/>
+          <surveyor/>
+          <applicant_name>
+            <applicant_name_prefix/>
+            <applicant_name_first/>
+            <applicant_name_middle/>
+            <applicant_name_last/>
+            <applicant_name_postfix/>
+            <geo_location/>
+          </applicant_name>
+          <applicant_phone/>
+          <applicant_phone_alt/>
+          <applicant_dob/>
+          <applicant_marital_status/>
+          <applicant_spouse_name>
+            <applicant_name_prefix/>
+            <applicant_name_first/>
+            <applicant_name_middle/>
+            <applicant_name_last/>
+            <applicant_name_postfix/>
+          </applicant_spouse_name>
+          <loan/>
+          <loan_group>
+            <loan_bank_name/>
+            <loan_bank_branch/>
+            <loan_officer>
+              <loan_officer_name_prefix/>
+              <loan_officer_name_first/>
+              <loan_officer_name_middle/>
+              <loan_officer_name_last/>
+              <loan_officer_name_postfix/>
+            </loan_officer>
+          </loan_group>
+          <plot_number/>
+          <plot_description/>
+          <plot_address>
+            <plot_address_number/>
+            <plot_address_street/>
+            <plot_address_city/>
+          </plot_address>
+          <date_land_possession/>
+          <seller_name>
+            <seller_name_prefix/>
+            <seller_name_first/>
+            <seller_name_middle/>
+            <seller_name_last/>
+            <seller_name_postfix/>
+          </seller_name>
+          <seller_address>
+            <seller_address_number/>
+            <seller_address_street/>
+            <seller_address_city/>
+          </seller_address>
+          <means_of_acquire/>
+          <proprietorship/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </Basic-survey-prototype7>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/Basic-survey-prototype7/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/Basic-survey-prototype7/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/Basic-survey-prototype7/today" type="date"/>
+      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/Basic-survey-prototype7/deviceid" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/title" readonly="true()" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/project_id" readonly="true()" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/surveyor" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_name/applicant_name_prefix" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_name/applicant_name_first" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_name/applicant_name_middle" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_name/applicant_name_last" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_name/applicant_name_postfix" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_name/geo_location" type="geopoint"/>
+      <bind jr:preload="property" jr:preloadParams="phonenumber" nodeset="/Basic-survey-prototype7/applicant_phone" type="string"/>
+      <bind jr:preload="property" jr:preloadParams="phonenumber" nodeset="/Basic-survey-prototype7/applicant_phone_alt" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_dob" type="date"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_marital_status" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_spouse_name" relevant="selected( /Basic-survey-prototype7/applicant_marital_status , 'married')"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_prefix" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_first" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_middle" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_last" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_postfix" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/loan" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/loan_group" relevant="selected( /Basic-survey-prototype7/loan , 'yes')"/>
+      <bind nodeset="/Basic-survey-prototype7/loan_group/loan_bank_name" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/loan_group/loan_bank_branch" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_prefix" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_first" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_middle" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_last" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_postfix" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/plot_number" type="int"/>
+      <bind nodeset="/Basic-survey-prototype7/plot_description" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/plot_address/plot_address_number" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/plot_address/plot_address_street" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/plot_address/plot_address_city" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/date_land_possession" type="date"/>
+      <bind nodeset="/Basic-survey-prototype7/seller_name/seller_name_prefix" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/seller_name/seller_name_first" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/seller_name/seller_name_middle" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/seller_name/seller_name_last" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/seller_name/seller_name_postfix" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/seller_address/seller_address_number" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/seller_address/seller_address_street" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/seller_address/seller_address_city" type="string"/>
+      <bind nodeset="/Basic-survey-prototype7/means_of_acquire" type="select1"/>
+      <bind nodeset="/Basic-survey-prototype7/proprietorship" type="select1"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/Basic-survey-prototype7/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'d427376135c742c995a94a9d18df6614'" nodeset="/Basic-survey-prototype7/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/Basic-survey-prototype7/title">
+      <label>Basic Cadasta Survey Prototype – July 2015</label>
+    </input>
+    <input ref="/Basic-survey-prototype7/project_id">
+      <label>1</label>
+    </input>
+    <select1 ref="/Basic-survey-prototype7/surveyor">
+      <label>Name of Surveyor</label>
+      <item>
+        <label>Kate Chapman</label>
+        <value>katechapman</value>
+      </item>
+      <item>
+        <label>Frank Pichel</label>
+        <value>frankpichel</value>
+      </item>
+      <item>
+        <label>Ryan Whitley</label>
+        <value>ryanwhitley</value>
+      </item>
+      <item>
+        <label>Daniel Baah</label>
+        <value>danielbaah</value>
+      </item>
+      <item>
+        <label>Todd Slind</label>
+        <value>toddslind</value>
+      </item>
+      <item>
+        <label>Nicholas Hallahan</label>
+        <value>nicholashallahan</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/Basic-survey-prototype7/applicant_name">
+      <label>Name of Applicant</label>
+      <select1 ref="/Basic-survey-prototype7/applicant_name/applicant_name_prefix">
+        <label>Applicant Name Prefix</label>
+        <item>
+          <label>Dr.</label>
+          <value>dr</value>
+        </item>
+        <item>
+          <label>Mr.</label>
+          <value>mr</value>
+        </item>
+        <item>
+          <label>Mrs.</label>
+          <value>mrs</value>
+        </item>
+        <item>
+          <label>Ms.</label>
+          <value>ms</value>
+        </item>
+      </select1>
+      <input ref="/Basic-survey-prototype7/applicant_name/applicant_name_first">
+        <label>Applicant First Name</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/applicant_name/applicant_name_middle">
+        <label>Applicant Middle Name</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/applicant_name/applicant_name_last">
+        <label>Applicant Last Name (Surname)</label>
+      </input>
+      <select1 ref="/Basic-survey-prototype7/applicant_name/applicant_name_postfix">
+        <label>Applicant Name Postfix</label>
+        <item>
+          <label>Jr.</label>
+          <value>jr</value>
+        </item>
+        <item>
+          <label>Sr.</label>
+          <value>sr</value>
+        </item>
+        <item>
+          <label>III</label>
+          <value>iii</value>
+        </item>
+      </select1>
+      <input ref="/Basic-survey-prototype7/applicant_name/geo_location">
+        <label>Location of Parcel</label>
+        <hint>GPS coordinates can only be collected when outside.</hint>
+      </input>
+    </group>
+    <input ref="/Basic-survey-prototype7/applicant_dob">
+      <label>Applicant Date of Birth</label>
+    </input>
+    <select1 ref="/Basic-survey-prototype7/applicant_marital_status">
+      <label>Applicant Marital Status</label>
+      <item>
+        <label>Single</label>
+        <value>single</value>
+      </item>
+      <item>
+        <label>Married</label>
+        <value>married</value>
+      </item>
+      <item>
+        <label>Divorced</label>
+        <value>divorced</value>
+      </item>
+      <item>
+        <label>Widowed</label>
+        <value>widowed</value>
+      </item>
+      <item>
+        <label>Separated</label>
+        <value>separated</value>
+      </item>
+    </select1>
+    <group appearance="field-list" ref="/Basic-survey-prototype7/applicant_spouse_name">
+      <label>Name of Applicant's Spouse</label>
+      <select1 ref="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_prefix">
+        <label>Applicant Name Prefix</label>
+        <item>
+          <label>Dr.</label>
+          <value>dr</value>
+        </item>
+        <item>
+          <label>Mr.</label>
+          <value>mr</value>
+        </item>
+        <item>
+          <label>Mrs.</label>
+          <value>mrs</value>
+        </item>
+        <item>
+          <label>Ms.</label>
+          <value>ms</value>
+        </item>
+      </select1>
+      <input ref="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_first">
+        <label>Applicant First Name</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_middle">
+        <label>Applicant Middle Name</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_last">
+        <label>Applicant Last Name (Surname)</label>
+      </input>
+      <select1 ref="/Basic-survey-prototype7/applicant_spouse_name/applicant_name_postfix">
+        <label>Applicant Name Postfix</label>
+        <item>
+          <label>Jr.</label>
+          <value>jr</value>
+        </item>
+        <item>
+          <label>Sr.</label>
+          <value>sr</value>
+        </item>
+        <item>
+          <label>III</label>
+          <value>iii</value>
+        </item>
+      </select1>
+    </group>
+    <select1 ref="/Basic-survey-prototype7/loan">
+      <label>Is the land financed by a loan or mortgage?</label>
+      <item>
+        <label>Yes</label>
+        <value>yes</value>
+      </item>
+      <item>
+        <label>No</label>
+        <value>no</value>
+      </item>
+    </select1>
+    <group ref="/Basic-survey-prototype7/loan_group">
+      <label>Loan Group</label>
+      <input ref="/Basic-survey-prototype7/loan_group/loan_bank_name">
+        <label>Name of Bank with Loan</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/loan_group/loan_bank_branch">
+        <label>Name of Bank Branch</label>
+      </input>
+      <group appearance="field-list" ref="/Basic-survey-prototype7/loan_group/loan_officer">
+        <label>Name of Loan Officer</label>
+        <select1 ref="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_prefix">
+          <label>Loan Officer Name Prefix</label>
+          <item>
+            <label>Dr.</label>
+            <value>dr</value>
+          </item>
+          <item>
+            <label>Mr.</label>
+            <value>mr</value>
+          </item>
+          <item>
+            <label>Mrs.</label>
+            <value>mrs</value>
+          </item>
+          <item>
+            <label>Ms.</label>
+            <value>ms</value>
+          </item>
+        </select1>
+        <input ref="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_first">
+          <label>Loan Officer First Name</label>
+        </input>
+        <input ref="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_middle">
+          <label>Loan Officer Middle Name</label>
+        </input>
+        <input ref="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_last">
+          <label>Loan Officer Last Name (Surname)</label>
+        </input>
+        <select1 ref="/Basic-survey-prototype7/loan_group/loan_officer/loan_officer_name_postfix">
+          <label>Loan Officer Name Postfix</label>
+          <item>
+            <label>Jr.</label>
+            <value>jr</value>
+          </item>
+          <item>
+            <label>Sr.</label>
+            <value>sr</value>
+          </item>
+          <item>
+            <label>III</label>
+            <value>iii</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <input ref="/Basic-survey-prototype7/plot_number">
+      <label>Plot / Property Number</label>
+    </input>
+    <input ref="/Basic-survey-prototype7/plot_description">
+      <label>Description of Property Location</label>
+    </input>
+    <group appearance="field-list" ref="/Basic-survey-prototype7/plot_address">
+      <label>Address</label>
+      <input ref="/Basic-survey-prototype7/plot_address/plot_address_number">
+        <label>Address (House) Number</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/plot_address/plot_address_street">
+        <label>Street Name</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/plot_address/plot_address_city">
+        <label>City / Town / Village</label>
+      </input>
+    </group>
+    <input ref="/Basic-survey-prototype7/date_land_possession">
+      <label>Date of Land Possession</label>
+    </input>
+    <group appearance="field-list" ref="/Basic-survey-prototype7/seller_name">
+      <label>Name of Property Seller</label>
+      <select1 ref="/Basic-survey-prototype7/seller_name/seller_name_prefix">
+        <label>Property Seller Name Prefix</label>
+        <item>
+          <label>Dr.</label>
+          <value>dr</value>
+        </item>
+        <item>
+          <label>Mr.</label>
+          <value>mr</value>
+        </item>
+        <item>
+          <label>Mrs.</label>
+          <value>mrs</value>
+        </item>
+        <item>
+          <label>Ms.</label>
+          <value>ms</value>
+        </item>
+      </select1>
+      <input ref="/Basic-survey-prototype7/seller_name/seller_name_first">
+        <label>Property Seller First Name</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/seller_name/seller_name_middle">
+        <label>Property Seller Middle Name</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/seller_name/seller_name_last">
+        <label>Property Seller Last Name (Surname)</label>
+      </input>
+      <select1 ref="/Basic-survey-prototype7/seller_name/seller_name_postfix">
+        <label>Property Seller Name Postfix</label>
+        <item>
+          <label>Jr.</label>
+          <value>jr</value>
+        </item>
+        <item>
+          <label>Sr.</label>
+          <value>sr</value>
+        </item>
+        <item>
+          <label>III</label>
+          <value>iii</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/Basic-survey-prototype7/seller_address">
+      <label>Property Seller Address</label>
+      <input ref="/Basic-survey-prototype7/seller_address/seller_address_number">
+        <label>Address (House) Number</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/seller_address/seller_address_street">
+        <label>Street Name</label>
+      </input>
+      <input ref="/Basic-survey-prototype7/seller_address/seller_address_city">
+        <label>City / Town / Village</label>
+      </input>
+    </group>
+    <select1 ref="/Basic-survey-prototype7/means_of_acquire">
+      <label>How did you acquire the land?</label>
+      <item>
+        <label>Freehold</label>
+        <value>freehold</value>
+      </item>
+      <item>
+        <label>Lease</label>
+        <value>lease</value>
+      </item>
+      <item>
+        <label>Inheritance</label>
+        <value>inheritance</value>
+      </item>
+      <item>
+        <label>Gift</label>
+        <value>gift</value>
+      </item>
+      <item>
+        <label>Other</label>
+        <value>other</value>
+      </item>
+    </select1>
+    <select1 ref="/Basic-survey-prototype7/proprietorship">
+      <label>How is the proprietorship held?</label>
+      <item>
+        <label>Allodial Ownder</label>
+        <value>allodial</value>
+      </item>
+      <item>
+        <label>Freehold</label>
+        <value>freehold</value>
+      </item>
+      <item>
+        <label>Common Law Freehold</label>
+        <value>common_law_freehold</value>
+      </item>
+      <item>
+        <label>Leasehold Interest</label>
+        <value>lease</value>
+      </item>
+      <item>
+        <label>Contractual / Share Cropping / Customary Tenure Agreement</label>
+        <value>contractual</value>
+      </item>
+      <item>
+        <label>Unknown</label>
+        <value>unknown</value>
+      </item>
+    </select1>
+  </h:body>
+</h:html>
