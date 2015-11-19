@@ -1,0 +1,26 @@
+{
+  "name": "Test",
+  "temp": 10,
+  "humidity": "med",
+  "wind": "low",
+  "repeat_observation": {
+    "bird": "pigeon",
+    "location": {
+      "latitude": 38.64943563938141,
+      "longitude": -121.36914789676666,
+      "altitude": -17,
+      "precision": 13
+    },
+    "image": {
+      "originalFilename": "1447894234726.jpg"
+    },
+    "notes": "Ok"
+  },
+  "meta": {
+    "instanceId": "uuid:9e586400-8e57-11e5-8e5e-d77a3c9cedd1",
+    "instanceName": "nm",
+    "formId": "Birds",
+    "deviceId": "imei:864506020150190",
+    "submissionTime": "2015-11-19T00:51:07.454Z"
+  }
+}
