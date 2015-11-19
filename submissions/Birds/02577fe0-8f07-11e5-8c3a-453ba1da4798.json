@@ -1,0 +1,26 @@
+{
+  "name": "Bamboo",
+  "temp": 44,
+  "humidity": "high",
+  "wind": "high",
+  "repeat_observation": {
+    "bird": "hawfinch",
+    "location": {
+      "latitude": 38.64930723,
+      "longitude": -121.36956688,
+      "altitude": -4,
+      "precision": 16
+    },
+    "image": {
+      "originalFilename": "1447966957422.jpg"
+    },
+    "notes": "Y"
+  },
+  "meta": {
+    "instanceId": "uuid:02577fe0-8f07-11e5-8c3a-453ba1da4798",
+    "instanceName": "nm",
+    "formId": "Birds",
+    "deviceId": "imei:864506020150190",
+    "submissionTime": "2015-11-19T21:46:37.147Z"
+  }
+}
