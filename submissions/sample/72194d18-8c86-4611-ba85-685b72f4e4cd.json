@@ -1,0 +1,25 @@
+{
+  "some_text": "Nevada2",
+  "a_integer": 123,
+  "a_decimal": 44.12,
+  "calculate": 167.12,
+  "select_example": "no",
+  "required_text": "Nevada2",
+  "acknowledge_test": "OK",
+  "group_test": {},
+  "table_list_example": {},
+  "labeled_select_group": {},
+  "start": "2015-11-16T17:32:12.328-08",
+  "end": "2015-11-16T17:33:06.134-08",
+  "today": "2015-11-16",
+  "deviceid": 864506020150190,
+  "simserial": "8901260302790481556F",
+  "phonenumber": "+15038993942",
+  "meta": {
+    "instanceId": "uuid:72194d18-8c86-4611-ba85-685b72f4e4cd",
+    "instanceName": "sample_xlsform",
+    "formId": "sample",
+    "deviceId": "imei:864506020150190",
+    "submissionTime": "2015-11-19T00:49:37.697Z"
+  }
+}
